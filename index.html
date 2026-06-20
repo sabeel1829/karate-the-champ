@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karate The Champ</title>
+  <link rel="icon" type="image/jpeg" href="../sensei/logo.jpeg">
+  <link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo-container">
+      <img src="../sensei/logo.jpeg" alt="Karate The Champ Logo" class="logo-img">
+      <div class="logo">
+        <span class="logo-main">Karate The Champ</span>
+        
+      </div>
+    </a>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="Sensei.html">Sensei</a></li>
+      <li><a href="achievements.html">Achievements</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="karatetraining.html">Karate Training</a></li>
+      <li><a href="syllabus.html">Syllabus</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" id="home" style="background-image: url('../sensei/thechamp.jpeg');">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Club of the New Dawn · Oman</p>
+      <h1> The Champ</h1>
+      <p>Discipline • Strength • Confidence — professional martial arts coaching for every age and belt level.</p>
+      <div class="hero-form">
+        <select id="heroSlideSelect" class="hero-select">
+          <option value="Sensei.html">Sensei</option>
+           <option value="achievements.html">Achievements</option>
+          <option value="gallery.html">Gallery</option>
+          <option value="karatetraining.html">Karate Training</option> 
+          <option value="syllabus.html">Syllabus</option>
+          <option value="contact.html">Contact</option>
+        </select>
+        <button id="heroExploreButton" class="hero-btn" type="button">Explore Now</button>
+      </div>
+    </div>
+  </section>
+<section class="about-section">
+
+  <h2 class="section-title"> Welcome to The Champ</h2>
+
+  <div class="about">
+
+    <img src="../sensei/logo.jpeg"
+         alt="Karate The Champ Logo"
+         class="content-logo">
+
+    <div class="about-text">
+        <h3>Karate The Champ — Introduction</h3>
+        <p>A renewed center for Budokan style of Karate in Oman. Entitled with a wide vision to reach all those who aspire to learn and achieve in Karate.</p>
+        <p><strong>What makes us unique?</strong></p>
+        <div class="features-list">
+          <div class="feature-item"><span>1</span> Well experienced trainers</div>
+          <div class="feature-item"><span>2</span> Diversity of nationalities in one club</div>
+          <div class="feature-item"><span>3</span> National &amp; international competition fields</div>
+          <div class="feature-item"><span>4</span> Dedicated life skill programming</div>
+          <div class="feature-item"><span>5</span> Highly facilitated training center</div>
+          <div class="feature-item"><span>6</span> Free outdoor fun activities early morning</div>
+          <div class="feature-item"><span>7</span> First trial class is absolutely FREE!</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="highlights-section">
+    <h2 class="section-title">Why Train With Us</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Character &amp; Growth</h3>
+        <p>Karate Budokan Oman (KBO) welcomes all—children, teens, and adults. It is a martial art form that is so much more than kicking and punching. Beyond self-defense and physical skills, Karate develops core human qualities:</p>
+        <ul class="card-list">
+          <li>Character-building exercises &amp; leadership skills</li>
+          <li>A new-found appreciation of physical fitness</li>
+          <li>Anti-bully self-defense metrics</li>
+          <li>Build strength, flexibility, and core fitness</li>
+          <li>Unbreakable focus and listening skills</li>
+          <li>Lessons on managing tough situations</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Karate The Champ Builds Character, Physical Strength &amp; Respect</h3>
+        <p>We teach students a healthy combination of martial arts and self-defense training that will transform even the most shy and introverted child into someone who is strong, confident, and versatile.</p>
+        <p>Our classes engage younger students in games and drills used to improve blocking techniques as well as movement skills in an engaging way.</p>
+        <p>Focus is heavily given to structural safety, manners, empathy, impulse control, focus, and strict self-discipline.</p>
+        <p><strong>Karate starts with respect and ends with respect — OSS.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Karate The Champ. All Rights Reserved. Train Hard, Live Respectfully.</p>
+  </footer>
+
+  <script>
+    document.getElementById('heroExploreButton').addEventListener('click', function() {
+      const select = document.getElementById('heroSlideSelect');
+      window.location.href = select.value || 'Sensei.html';
+    });
+  </script>
+
+</body>
+</html>
