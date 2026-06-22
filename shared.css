@@ -17,13 +17,12 @@
   --shadow-sm: 0 12px 40px rgba(0, 0, 0, 0.06);
   --shadow-md: 0 24px 65px rgba(0, 0, 0, 0.08);
 
-  --radius-md: 18px;   /* Added */
+  --radius-md: 18px;
   --radius-lg: 28px;
 
   --font: 'Poppins', -apple-system, BlinkMacSystemFont,
           'Segoe UI', Arial, sans-serif;
-}sss
-*,
+}
 *::before,
 *::after {
   margin: 0;
@@ -41,6 +40,8 @@ body {
   color: var(--text-dark);
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   overflow-x: hidden;
 }
 
@@ -59,6 +60,7 @@ nav {
   width: 100%;
   padding: 14px clamp(1.25rem, 5vw, 4rem);
   background: rgba(255, 255, 255, 0.97);
+  -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
   display: flex;
   justify-content: space-between;
@@ -830,7 +832,7 @@ main {
 
 .outdoor-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(280px, 1fr));
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1rem;
   margin-top: 1.5rem;
 }
@@ -844,7 +846,7 @@ main {
 }
 .indoor-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap:1rem ;
   margin-top: 1.5rem;
 }
@@ -854,11 +856,11 @@ main {
   aspect-ratio: 6/6;
   object-fit: cover;
   border-radius: 8px;
-  border:1px solid var(--border)
+  border:1px solid var(--border);
 }
 
 .indoor-grid img:hover {
-  transform: scale(1.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
@@ -866,9 +868,8 @@ main {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #222;
+  color: var(--text-dark);
 }
-
 
 .thank-you-section {
     text-align: center;
@@ -888,7 +889,7 @@ main {
 .thank-logo {
     width: 40px;
     height: 40px;
-    object-fit: contaain;
+    object-fit: contain;
     border-radius: 50%;
     border: 2px solid gold;
 }
@@ -965,4 +966,5 @@ main {
   nav ul li a {
     font-size: 0.85rem;
   }
+}
 
